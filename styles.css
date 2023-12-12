@@ -1,0 +1,13 @@
+
+  
+  #grid {
+    display: grid;
+    width: 400px;
+    height: 400px;
+    background-color: azure;
+  }
+  
+  .grid-item {
+    border: 1px solid #ddd;
+  }
+  
