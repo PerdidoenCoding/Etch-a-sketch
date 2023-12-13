@@ -1,13 +1,202 @@
+:root {
+  --primary-aqua: aqua;
+  --secondary-blue: #47A7FA;
+  --azure: azure;
 
-  
+}
+
+
+
+
+header, body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--azure);
+}
+
+h1 {
+  font-family: 'Poppins', sans-serif;
+  font-family: 'Whisper', cursive;
+  font-style: italic;
+  color: var(--primary-aqua);
+  font-weight: 900;
+  font-size: 48px;
+  margin: 0;
+}
+
+.size-value {
+  font-family: 'Poppins', sans-serif;
+  font-family: 'Whisper', cursive;
+  font-style: italic;
+  padding: 6px;
+  font-size: 48px;
+  text-align: center;
+  color: var(--primary-aqua);
+  margin: 0;
+  padding: 0;
+}
+
   #grid {
     display: grid;
-    width: 400px;
-    height: 400px;
-    background-color: azure;
+    width: 500px;
+    height: 500px;
+    background-color: #fefefe;
+  }
+
+  .grid-item:hover {
+    cursor: pointer;
   }
   
-  .grid-item {
-    border: 1px solid #ddd;
-  }
-  
+.settings {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#color-picker {
+  border-radius: 50%;
+  align-self: center;
+}
+
+button:hover,
+input[type='color']:hover {
+  transform: scale(1.05);
+}
+
+input[type='color']:active {
+  transition: transform 0.05s ease-in-out;
+  transform: scale(1);
+}
+
+input[type='color'] {
+  -webkit-appearance: none;
+  width: 50px;
+  height: 50px;
+  border: none;
+}
+
+input[type='color']::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+
+input[type='color']::-webkit-color-swatch {
+  border: none;
+  border-radius: 50px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+input[type=range] {
+  height: 38px;
+  -webkit-appearance: none;
+  margin: 1px 0;
+  width: 100%;
+}
+input[type=range]:focus {
+  outline: none;
+}
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 10px;
+  cursor: pointer;
+  animate: 0.2s;
+  box-shadow: 2px 2px 1px #000000;
+  background: var(--secondary-blue);
+  border-radius: 5px;
+  border: 1px solid #000000;
+}
+input[type=range]::-webkit-slider-thumb {
+  box-shadow: 1px 1px 1px #000000;
+  border: 1px solid #000000;
+  height: 30px;
+  width: 15px;
+  background: var(--primary-aqua);
+  border-radius: 35px;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -11px;
+}
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background: var(--secondary-blue);
+}
+input[type=range]::-moz-range-track {
+  width: 100%;
+  height: 10px;
+  cursor: pointer;
+  animate: 0.2s;
+  box-shadow: 2px 2px 1px #000000;
+  background: var(--secondary-blue);
+  border-radius: 5px;
+  border: 1px solid #000000;
+}
+input[type=range]::-moz-range-thumb {
+  box-shadow: 1px 1px 1px #000000;
+  border: 1px solid #000000;
+  height: 30px;
+  width: 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+input[type=range]::-ms-track {
+  width: 100%;
+  height: 10px;
+  cursor: pointer;
+  animate: 0.2s;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+input[type=range]::-ms-fill-lower {
+  background: var(--secondary-blue);
+  border: 1px solid #000000;
+  border-radius: 10px;
+  box-shadow: 2px 2px 1px #000000;
+}
+input[type=range]::-ms-fill-upper {
+  background: var(--secondary-blue);
+  border: 1px solid #000000;
+  border-radius: 10px;
+  box-shadow: 2px 2px 1px #000000;
+}
+input[type=range]::-ms-thumb {
+  margin-top: 1px;
+  box-shadow: 1px 1px 1px #000000;
+  border: 1px solid #000000;
+  height: 30px;
+  width: 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+input[type=range]:focus::-ms-fill-lower {
+  background: var(--secondary-blue);
+}
+input[type=range]:focus::-ms-fill-upper {
+  background: var(--secondary-blue);
+}
+
+#sizeSlider {
+  background-color: transparent;
+}
+
+button {
+  font-family: arial;
+  font-weight: bold;
+  color: #14396A !important;
+  font-size: 14px;
+  text-shadow: 1px 1px 0px #7CACDE;
+  box-shadow: 1px 1px 1px #BEE2F9;
+  padding: 10px 25px;
+  border-radius: 10px;
+  border: 2px solid #3866A3;
+  background: #63B8EE;
+  background: linear-gradient(to top, #63B8EE, #468CCF);
+  width: 200px;
+  align-self: center;
+  margin: 5px;
+}
+button:hover {
+  color: #14396A !important;
+  background: #468CCF;
+  background: linear-gradient(to top, #468CCF, #63B8EE);
+}
